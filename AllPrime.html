@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prime Number</title>
+
+    <style>
+
+    </style>
+    <script>
+        function Prime() {
+            if (document.getElementById("p1").checked == true) {
+
+                //No return value no argument:::
+
+                function prime1() {
+                    let Number = document.getElementById('prime1').value;
+
+                    let isprime = 1;
+                    if (Number == 1) {
+                        document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                    } else if (Number > 1) {
+                        for (let i = 2; i < Number; i++) {
+                            if (Number % i == 0) {
+                                isprime = 0;
+                                break;
+                            }
+                        }
+                        if (isprime) {
+                            document.getElementById("prime").innerHTML = "Number is prime.";
+                        } else {
+                            document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        }
+                    } else {
+                        document.getElementById("prime").innerHTML = "Please Enter Number";
+                    }
+                }
+                prime1();
+            } else if (document.getElementById("p2").checked == true) {
+
+                //No return value with argument:::
+
+                function prime1(Number) {
+                    var Number = document.getElementById('prime1').value;
+
+                    let isprime = 1;
+                    if (Number == 1) {
+                        document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                    } else if (Number > 1) {
+                        for (let i = 2; i < Number; i++) {
+                            if (Number % i == 0) {
+                                isprime = 0;
+                                break;
+                            }
+                        }
+                        if (isprime) {
+                            document.getElementById("prime").innerHTML = "Number is prime.";
+                        } else {
+                            document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        }
+                    } else {
+                        document.getElementById("prime").innerHTML = "Please Enter Number";
+                    }
+                }
+                prime1(Number);
+            } else if (document.getElementById("p3").checked == true) {
+
+                //With return value with argument:::
+
+                function prime1(Number) {
+                    var Number = document.getElementById('prime1').value;
+
+                    let isprime = 1;
+                    if (Number == 1) {
+                        return document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                    } else if (Number > 1) {
+                        for (let i = 2; i < Number; i++) {
+                            if (Number % i == 0) {
+                                isprime = 0;
+                                break;
+                            }
+                        }
+                        if (isprime) {
+                            return document.getElementById("prime").innerHTML = "Number is prime.";
+                        } else {
+                            return document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        }
+                    } else {
+                        return document.getElementById("prime").innerHTML = "Please Enter Number";
+                    }
+                }
+                prime1(Number);
+            } else if (document.getElementById("p4").checked == true) {
+
+                //With return value No argument:::
+
+                function prime1() {
+                    let Number3 = document.getElementById('prime1').value;
+
+                    let isprime = 1;
+                    if (Number3 == 1) {
+                        return document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                    } else if (Number3 > 1) {
+                        for (let i = 2; i < Number3; i++) {
+                            if (Number3 % i == 0) {
+                                isprime = 0;
+                                break;
+                            }
+                        }
+                        if (isprime) {
+                            return document.getElementById("prime").innerHTML = "Number is prime.";
+                        } else {
+                            return document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        }
+                    } else {
+                        return document.getElementById("prime").innerHTML = "Please Enter Number";
+                    }
+                }
+                prime1();
+            } else if (document.getElementById("p5").checked == true) {
+
+                //Function Expration:::
+
+                let prime1 = function() {
+                    let Number3 = document.getElementById('prime1').value;
+
+                    let isprime = 1;
+                    if (Number3 == 1) {
+                        return document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                    } else if (Number3 > 1) {
+                        for (let i = 2; i < Number3; i++) {
+                            if (Number3 % i == 0) {
+                                isprime = 0;
+                                break;
+                            }
+                        }
+                        if (isprime) {
+                            return document.getElementById("prime").innerHTML = "Number is prime.";
+                        } else {
+                            return document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        }
+                    } else {
+                        return document.getElementById("prime").innerHTML = "Please Enter Number";
+                    }
+                }
+                prime1();
+            } else if (document.getElementById("p6").checked == true) {
+                let Number4 = document.getElementById('prime1').value;
+                //Function CallBack:::
+
+                function prime1() {
+                    let Number4 = document.getElementById('prime1').value;
+
+                    let isprime = 1;
+
+                    for (let i = 2; i < Number4; i++) {
+                        if (Number4 % i == 0) {
+                            isprime = 0;
+                            break;
+                        }
+
+                        return isprime;
+                    }
+                }
+
+                function prime() {
+                    if (Number4 == 1) {
+                        document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                    } else if (Number4 > 1) {
+                        if (prime1()) {
+                            document.getElementById("prime").innerHTML = "Number is prime.";
+                        } else {
+                            document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        }
+                    } else {
+                        document.getElementById("prime").innerHTML = "Please Enter Number";
+                    }
+
+                }
+                prime();
+            } else if (document.getElementById("p7").checked == true) {
+
+                //Function Arrow:::
+
+                let prime1 = () => {
+                    let Number3 = document.getElementById('prime1').value;
+
+                    let isprime = 1;
+                    if (Number3 == 1) {
+                        return document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                    } else if (Number3 > 1) {
+                        for (let i = 2; i < Number3; i++) {
+                            if (Number3 % i == 0) {
+                                isprime = 0;
+                                break;
+                            }
+                        }
+                        if (isprime) {
+                            return document.getElementById("prime").innerHTML = "Number is prime.";
+                        } else {
+                            return document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        }
+                    } else {
+                        return document.getElementById("prime").innerHTML = "Please Enter Number";
+                    }
+                }
+                prime1();
+            } else if (document.getElementById("p8").checked == true) {
+                function prime1() {
+
+                    //Function Promise:::
+
+                    let promise = new Promise(function(resolve, reject) {
+                        let Number = document.getElementById('prime1').value;
+                        let isprime = 1;
+                        if (Number == 1) {
+                            document.getElementById("prime").innerHTML = "1 is not prime number and composite number";
+                        } else if (Number > 1) {
+                            for (let i = 2; i < Number; i++) {
+                                if (Number % i == 0) {
+                                    isprime = 0;
+                                    break;
+                                }
+                            }
+                            if (isprime) {
+                                resolve();
+                            } else {
+                                reject();
+                            }
+                        } else {
+                            document.getElementById("prime").innerHTML = "Please Enter Number";
+                        }
+
+                    });
+
+                    promise
+                        .then(() => {
+                            document.getElementById("prime").innerHTML = "Number is prime.";
+                        })
+                        .catch(() => {
+                            document.getElementById("prime").innerHTML = "Number is Not prime.";
+                        })
+                }
+                prime1();
+            } else {
+                document.getElementById("prime").innerHTML = "Please Select radio button";
+            }
+        }
+    </script>
+</head>
+
+
+<body style="background-color: rgb(233, 190, 190)">
+    <center>
+        <h3 style="color: rgb(180, 41, 16);">Check whether Numebr is Prime or Not</h3>
+        <table border="3px" rules="all" style="background-color: rgb(245, 157, 116);">
+            <tr>
+                <td> <b>Enter Number::</b></td>
+                <td> <input type="text" id="prime1"></td>
+            </tr>
+
+            <tr>
+                <td>No return value no argument:</td>
+                <td> <input type="radio" name="radio1" id="p1" /> </td>
+            </tr>
+
+            <tr>
+                <td>No return value with argument:</td>
+                <td> <input type="radio" name="radio1" id="p2" /> </td>
+            </tr>
+
+            <tr>
+                <td>With return value with argument:</td>
+                <td> <input type="radio" name="radio1" id="p3" /> </td>
+            </tr>
+
+            <tr>
+                <td>With return type No argument:</td>
+                <td> <input type="radio" name="radio1" id="p4" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Expression:</td>
+                <td> <input type="radio" name="radio1" id="p5" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function callback:</td>
+                <td> <input type="radio" name="radio1" id="p6" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Arrow:</td>
+                <td> <input type="radio" name="radio1" id="p7" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Promise:</td>
+                <td> <input type="radio" name="radio1" id="p8" /> </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Check Result" onclick="Prime()"></td>
+                <td id="prime"> <input type="text" /> </td>
+            </tr>
+
+
+        </table>
+    </center>
+</body>
+
+</html>

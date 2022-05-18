@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reverse Number</title>
+
+    <style>
+
+    </style>
+    <script>
+        function reverse11() {
+            if (document.getElementById("p1").checked == true) {
+
+                //No return value no argument:::
+                function reverse() {
+                    let Number = document.getElementById('reverse').value;
+                    let remainder, reversed = 0;
+                    if (Number > 0) {
+                        while (Number != 0) {
+                            remainder = Number % 10;
+                            reversed = reversed * 10 + remainder;
+                            Number = parseInt(Number / 10);
+                        }
+                        document.getElementById('reverse1').innerHTML = reversed;
+                    } else {
+                        document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+                reverse();
+            } else if (document.getElementById("p2").checked == true) {
+
+                //No return value with argument:::
+
+                function reverse(Number) {
+                    var Number = document.getElementById('reverse').value;
+                    let remainder, reversed = 0;
+                    if (Number > 0) {
+                        while (Number != 0) {
+                            remainder = Number % 10;
+                            reversed = reversed * 10 + remainder;
+                            Number = parseInt(Number / 10);
+                        }
+                        document.getElementById('reverse1').innerHTML = reversed;
+                    } else {
+                        document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+                reverse(Number);
+            } else if (document.getElementById("p3").checked == true) {
+
+                //With return value with argument:::
+
+                function reverse(Number) {
+                    var Number = document.getElementById('reverse').value;
+                    let remainder, reversed = 0;
+                    if (Number > 0) {
+                        while (Number != 0) {
+                            remainder = Number % 10;
+                            reversed = reversed * 10 + remainder;
+                            Number = parseInt(Number / 10);
+                        }
+                        return document.getElementById('reverse1').innerHTML = reversed;
+                    } else {
+                        return document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+                reverse(Number);
+
+            } else if (document.getElementById("p4").checked == true) {
+
+                //With return value No argument:::
+
+                function reverse() {
+                    let Number = document.getElementById('reverse').value;
+                    let remainder, reversed = 0;
+                    if (Number > 0) {
+                        while (Number != 0) {
+                            remainder = Number % 10;
+                            reversed = reversed * 10 + remainder;
+                            Number = parseInt(Number / 10);
+                        }
+                        return document.getElementById('reverse1').innerHTML = reversed;
+                    } else {
+                        return document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+                reverse();
+            } else if (document.getElementById("p5").checked == true) {
+
+                //Function Expration:::
+
+                let reverse = function() {
+                    let Number = document.getElementById('reverse').value;
+                    let remainder, reversed = 0;
+                    if (Number > 0) {
+                        while (Number != 0) {
+                            remainder = Number % 10;
+                            reversed = reversed * 10 + remainder;
+                            Number = parseInt(Number / 10);
+                        }
+                        document.getElementById('reverse1').innerHTML = reversed;
+                    } else {
+                        document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+                reverse();
+
+            } else if (document.getElementById("p6").checked == true) {
+
+                //Function CallBack:::
+
+                function reverse() {
+                    var Number = document.getElementById('reverse').value;
+                    let remainder, reversed = 0;
+                    if (Number > 0) {
+                        while (Number != 0) {
+                            remainder = Number % 10;
+                            reversed = reversed * 10 + remainder;
+                            Number = parseInt(Number / 10);
+                        }
+                        return reversed;
+                    } else {
+                        document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+
+                function revers() {
+                    var Number = document.getElementById('reverse').value;
+                    let result = reverse();
+                    if (Number > 0) {
+                        document.getElementById('reverse1').innerHTML = result;
+                    } else {
+                        document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+                revers();
+            } else if (document.getElementById("p7").checked == true) {
+
+                //Function Arrow:::
+                let reverse = () => {
+                    let Number = document.getElementById('reverse').value;
+                    let remainder, reversed = 0;
+                    if (Number > 0) {
+                        while (Number != 0) {
+                            remainder = Number % 10;
+                            reversed = reversed * 10 + remainder;
+                            Number = parseInt(Number / 10);
+                        }
+                        document.getElementById('reverse1').innerHTML = reversed;
+                    } else {
+                        document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                    }
+                }
+                reverse();
+
+
+            } else if (document.getElementById("p8").checked == true) {
+
+                //Function Promise:::
+                function reverse() {
+                    let promise = new Promise(function(resolve) {
+                        let Number = document.getElementById('reverse').value;
+                        let remainder, reversed = 0;
+                        if (Number > 0) {
+                            while (Number != 0) {
+                                remainder = Number % 10;
+                                reversed = reversed * 10 + remainder;
+                                Number = parseInt(Number / 10);
+                            }
+                            resolve(reversed);
+                        } else {
+                            document.getElementById('reverse1').innerHTML = "Please Enter Number";
+                        }
+                    });
+                    promise
+                        .then(reversed => {
+                            document.getElementById('reverse1').innerHTML = reversed;
+                        })
+                }
+                reverse();
+            } else {
+                document.getElementById("reverse1").innerHTML = "Please Select radio button";
+            }
+        }
+    </script>
+</head>
+
+
+<body style="background-color: rgb(233, 190, 190)">
+    <center>
+        <h3 style="color: rgb(180, 41, 16);">Reverse Numbers</h3>
+        <table border="3px" rules="all" style="background-color: rgb(245, 157, 116);">
+            <tr>
+                <td> <b>Enter Number::</b></td>
+                <td> <input type="text" id="reverse"></td>
+            </tr>
+
+            <tr>
+                <td>No return value no argument:</td>
+                <td> <input type="radio" name="radio1" id="p1" /> </td>
+            </tr>
+
+            <tr>
+                <td>No return value with argument:</td>
+                <td> <input type="radio" name="radio1" id="p2" /> </td>
+            </tr>
+
+            <tr>
+                <td>With return value with argument:</td>
+                <td> <input type="radio" name="radio1" id="p3" /> </td>
+            </tr>
+
+            <tr>
+                <td>With return type No argument:</td>
+                <td> <input type="radio" name="radio1" id="p4" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Expression:</td>
+                <td> <input type="radio" name="radio1" id="p5" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function callback:</td>
+                <td> <input type="radio" name="radio1" id="p6" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Arrow:</td>
+                <td> <input type="radio" name="radio1" id="p7" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Promise:</td>
+                <td> <input type="radio" name="radio1" id="p8" /> </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Check Result" onclick="reverse11()"></td>
+                <td id="reverse1"> <input type="text" /> </td>
+            </tr>
+
+
+        </table>
+    </center>
+</body>
+
+</html>

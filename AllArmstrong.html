@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Armstrong Number</title>
+
+    <style>
+
+    </style>
+    <script>
+        function armstrong11() {
+            if (document.getElementById("p1").checked == true) {
+
+                //No return value no argument:::
+
+                function armstrong() {
+                    let Number = document.getElementById('armstrong').value;
+                    let remainder, sum = 0,
+                        c,
+                        temp = Number;
+
+                    if (Number > 0) {
+                        while (Number > 0) {
+                            remainder = Number % 10;
+                            c = remainder * remainder * remainder;
+                            sum = sum + c;
+                            Number = parseInt(Number / 10);
+                        }
+                        Number = temp;
+                        if (Number == sum) {
+                            document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        } else {
+                            document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        }
+                    } else {
+                        document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                    }
+                }
+                armstrong();
+            } else if (document.getElementById("p2").checked == true) {
+
+                //No return value with argument:::
+
+                function armstrong(Number) {
+                    var Number = document.getElementById('armstrong').value;
+                    let remainder, sum = 0,
+                        c,
+                        temp = Number;
+
+                    if (Number > 0) {
+                        while (Number > 0) {
+                            remainder = Number % 10;
+                            c = remainder * remainder * remainder;
+                            sum = sum + c;
+                            Number = parseInt(Number / 10);
+                        }
+                        Number = temp;
+                        if (Number == sum) {
+                            document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        } else {
+                            document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        }
+                    } else {
+                        document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                    }
+                }
+                armstrong(Number);
+            } else if (document.getElementById("p3").checked == true) {
+
+                //With return value with argument:::
+
+                function armstrong(Number) {
+                    var Number = document.getElementById('armstrong').value;
+                    let remainder, sum = 0,
+                        c,
+                        temp = Number;
+
+                    if (Number > 0) {
+                        while (Number > 0) {
+                            remainder = Number % 10;
+                            c = remainder * remainder * remainder;
+                            sum = sum + c;
+                            Number = parseInt(Number / 10);
+                        }
+                        Number = temp;
+                        if (Number == sum) {
+                            return document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        } else {
+                            return document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        }
+                    } else {
+                        return document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                    }
+                }
+                armstrong(Number);
+
+            } else if (document.getElementById("p4").checked == true) {
+
+                //With return value No argument:::
+
+                function armstrong() {
+                    var Number = document.getElementById('armstrong').value;
+                    let remainder, sum = 0,
+                        c,
+                        temp = Number;
+
+                    if (Number > 0) {
+                        while (Number > 0) {
+                            remainder = Number % 10;
+                            c = remainder * remainder * remainder;
+                            sum = sum + c;
+                            Number = parseInt(Number / 10);
+                        }
+                        Number = temp;
+                        if (Number == sum) {
+                            return document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        } else {
+                            return document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        }
+                    } else {
+                        return document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                    }
+                }
+                armstrong();
+
+            } else if (document.getElementById("p5").checked == true) {
+
+                //Function Expration:::
+
+                let armstrong = function() {
+                    let Number = document.getElementById('armstrong').value;
+                    let remainder, sum = 0,
+                        c,
+                        temp = Number;
+
+                    if (Number > 0) {
+                        while (Number > 0) {
+                            remainder = Number % 10;
+                            c = remainder * remainder * remainder;
+                            sum = sum + c;
+                            Number = parseInt(Number / 10);
+                        }
+                        Number = temp;
+                        if (Number == sum) {
+                            document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        } else {
+                            document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        }
+                    } else {
+                        document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                    }
+                }
+                armstrong();
+
+            } else if (document.getElementById("p6").checked == true) {
+
+                //Function CallBack:::
+
+                function armstrong() {
+                    var Number = document.getElementById('armstrong').value;
+                    let remainder, sum = 0,
+                        c,
+                        temp = Number;
+
+                    if (Number > 0) {
+                        while (Number > 0) {
+                            remainder = Number % 10;
+                            c = remainder * remainder * remainder;
+                            sum = sum + c;
+                            Number = parseInt(Number / 10);
+                        }
+                        Number = temp;
+                        return (Number == sum);
+                    }
+                }
+
+                function armstrong1() {
+                    var Number = document.getElementById('armstrong').value;
+                    if (Number > 0) {
+                        if (armstrong()) {
+                            document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        } else {
+                            document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        }
+                    } else {
+                        document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                    }
+                }
+                armstrong1();
+            } else if (document.getElementById("p7").checked == true) {
+
+                //Function Arrow:::
+
+                let armstrong = () => {
+                    let Number = document.getElementById('armstrong').value;
+                    let remainder, sum = 0,
+                        c,
+                        temp = Number;
+
+                    if (Number > 0) {
+                        while (Number > 0) {
+                            remainder = Number % 10;
+                            c = remainder * remainder * remainder;
+                            sum = sum + c;
+                            Number = parseInt(Number / 10);
+                        }
+                        Number = temp;
+                        if (Number == sum) {
+                            document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        } else {
+                            document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        }
+                    } else {
+                        document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                    }
+                }
+                armstrong();
+
+            } else if (document.getElementById("p8").checked == true) {
+
+                //Function Promise:::
+
+                function armstrong() {
+                    let promise = new Promise(function(resolve, reject) {
+                        let Number = document.getElementById('armstrong').value;
+                        let remainder, sum = 0,
+                            c,
+                            temp = Number;
+
+                        if (Number > 0) {
+                            while (Number > 0) {
+                                remainder = Number % 10;
+                                c = remainder * remainder * remainder;
+                                sum = sum + c;
+                                Number = parseInt(Number / 10);
+                            }
+                            Number = temp;
+                            if (Number == sum) {
+                                resolve();
+                            } else {
+                                reject();
+                            }
+                        } else {
+                            document.getElementById('armstrong1').innerHTML = "Please Enter Number";
+                        }
+                    });
+                    promise
+                        .then(() => {
+                            document.getElementById('armstrong1').innerHTML = "Number is Armstrong";
+                        })
+                        .catch(() => {
+                            document.getElementById('armstrong1').innerHTML = "Number is Not Armstrong";
+                        })
+                }
+                armstrong();
+
+            } else {
+                document.getElementById("armstrong1").innerHTML = "Please Select radio button";
+            }
+        }
+    </script>
+</head>
+
+
+<body style="background-color: rgb(233, 190, 190)">
+    <center>
+        <h3 style="color: rgb(180, 41, 16);">Check whether Numebr is Armstrong or Not</h3>
+        <table border="3px" rules="all" style="background-color: rgb(245, 157, 116);">
+            <tr>
+                <td> <b>Enter Number::</b></td>
+                <td> <input type="text" id="armstrong"></td>
+            </tr>
+
+            <tr>
+                <td>No return value no argument:</td>
+                <td> <input type="radio" name="radio1" id="p1" /> </td>
+            </tr>
+
+            <tr>
+                <td>No return value with argument:</td>
+                <td> <input type="radio" name="radio1" id="p2" /> </td>
+            </tr>
+
+            <tr>
+                <td>With return value with argument:</td>
+                <td> <input type="radio" name="radio1" id="p3" /> </td>
+            </tr>
+
+            <tr>
+                <td>With return type No argument:</td>
+                <td> <input type="radio" name="radio1" id="p4" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Expression:</td>
+                <td> <input type="radio" name="radio1" id="p5" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function callback:</td>
+                <td> <input type="radio" name="radio1" id="p6" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Arrow:</td>
+                <td> <input type="radio" name="radio1" id="p7" /> </td>
+            </tr>
+
+            <tr>
+                <td>Function Promise:</td>
+                <td> <input type="radio" name="radio1" id="p8" /> </td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Check Result" onclick="armstrong11()"></td>
+                <td id="armstrong1"> <input type="text" /> </td>
+            </tr>
+
+
+        </table>
+    </center>
+</body>
+
+</html>
